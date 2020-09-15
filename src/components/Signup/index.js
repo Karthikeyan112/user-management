@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signup.scss';
+import '../../styles/form.scss';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
@@ -20,53 +21,55 @@ const Signup = () => {
   }
   return (
     <div className='signup'>
-      <h1 className='signup__header'>Create An Account</h1>
-      <form className='signup__container'>
-        <input
-          className='signup__input'
-          placeholder='First Name'
-          type='text'
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <input
-          className='signup__input'
-          placeholder='Last Name'
-          type='text'
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <input
-          className='signup__input'
-          placeholder='Enter Email'
-          type='email'
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-        <input
-          className='signup__input'
-          placeholder='Mobile no..'
-          type='tel'
-          value={mobileNo}
-          onChange={(e) => setMobileNo(e.target.value)}
-        />
-        <input
-          className='signup__input'
-          placeholder='Password'
-          type='password'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          className='signup__btn'
-          type='submit'
-          onClick={handleSubmit}
-        >
-          Login
-        </button>
-      </form>
-      <div className='signup__login'>
-        <p>Already have an account? <Link to='/signin'>Login</Link></p>
+      <div className="login__container">
+        <h1 className='signup__header'>Create An Account</h1>
+        <form className='signup__form'>
+          <input
+            className='formInput'
+            placeholder='First Name'
+            type='text'
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <input
+            className='formInput'
+            placeholder='Last Name'
+            type='text'
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <input
+            className='formInput'
+            placeholder='Enter Email'
+            type='email'
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <input
+            className='formInput'
+            placeholder='Mobile no..'
+            type='tel'
+            value={mobileNo}
+            onChange={(e) => setMobileNo(e.target.value)}
+          />
+          <input
+            className='formInput'
+            placeholder='Password'
+            type='password'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            className='formBtn'
+            type='submit'
+            onClick={handleSubmit}
+          >
+            Create an Account
+          </button>
+        </form>
+        <div className='signup__login'>
+          <p>Already have an account? <Link to='/signin'>Login</Link></p>
+        </div>
       </div>
     </div>
   )
