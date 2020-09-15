@@ -18,7 +18,7 @@ function App() {
             <Signup />
           </Route>
           <Route path='/'>
-            <Redirect to="/signin" />
+            <Redirect push to="/signin" />
           </Route>
         </Switch>
       </Router>
