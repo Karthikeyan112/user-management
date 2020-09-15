@@ -5,10 +5,11 @@
   justify-content: center;
   align-items: center;
 
-   &__container {
+  &__container {
     text-align: center;
     border: 1px solid #555;
     padding: 2rem;
+    width: 40rem;
   }
 
   &__header {
@@ -17,19 +18,29 @@
     color: #605757;
   }
 
+  @media only screen and (max-width: 480px) {
+    &__container {
+      border: none;
+      width: 100%;
+      padding: 1rem;
+    }
+    &__form {
+    }
+  }
+
   &__form {
-    width: 40rem;
+    width: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    padding: 1rem;
   }
   &__login {
     margin-top: 1rem;
     font-size: 1.4rem;
     a {
       color: #32a84c;
+      font-weight: 600;
     }
   }
 }

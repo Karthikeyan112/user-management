@@ -15,20 +15,31 @@
     text-align: center;
     border: 1px solid #555;
     padding: 2rem;
+    width: 40rem;
   }
   
   &__form {
-    width: 40rem;
+    width: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
   }
+
+  @media only screen and (max-width: 480px) {
+    &__container {
+      border: none;
+      padding: .5rem;
+      width: 100%;
+    }
+  }
+
   &__singnup {
     margin-top: 1rem;
     font-size: 1.4rem;
     a {
       color: #32a84c;
+      font-weight: 600;
     }
   }
 }

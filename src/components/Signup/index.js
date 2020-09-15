@@ -21,7 +21,7 @@ const Signup = () => {
   }
   return (
     <div className='signup'>
-      <div className="login__container">
+      <div className="signup__container">
         <h1 className='signup__header'>Create An Account</h1>
         <form className='signup__form'>
           <input
